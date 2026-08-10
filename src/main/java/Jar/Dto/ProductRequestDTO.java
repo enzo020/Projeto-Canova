@@ -10,6 +10,8 @@ public record ProductRequestDTO(
 
         String description,
 
+        String imageUrl,
+
         @NotNull(message = "Linha é obrigatória")
         Long lineId
 ) {}

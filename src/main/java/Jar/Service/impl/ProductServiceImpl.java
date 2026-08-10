@@ -42,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product();
         product.setName(dto.name());
         product.setDescription(dto.description());
-        product.setLine(line);
+        product.setImageUrl(dto.imageUrl());
 
         return toResponseDTO(productRepository.save(product));
     }
@@ -57,6 +57,7 @@ public class ProductServiceImpl implements ProductService {
         product.setName(dto.name());
         product.setDescription(dto.description());
         product.setLine(line);
+        product.setImageUrl(dto.imageUrl());
 
         return toResponseDTO(productRepository.save(product));
     }
@@ -71,6 +72,7 @@ public class ProductServiceImpl implements ProductService {
                 product.getId(),
                 product.getName(),
                 product.getDescription(),
+                product.getImageUrl(),
                 product.getLine().getName()
         );
     }
